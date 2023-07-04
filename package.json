@@ -1,0 +1,23 @@
+{
+  "name": "datarelationships",
+  "version": "1.0.0",
+  "description": "Data relationships in MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ColloKaris/dataRelationships.git"
+  },
+  "author": "Collins Kariuki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ColloKaris/dataRelationships/issues"
+  },
+  "homepage": "https://github.com/ColloKaris/dataRelationships#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.3.1"
+  }
+}
