@@ -29,8 +29,14 @@ const User = mongoose.model('User', userSchema)
 // Make a new User
 const makeUser = async () => {
     const u = new User({
-        first: 'Harry',
-        last: 'Potter'
+        first: 'John',
+        last: 'Doe'
+      //   addresses: ({
+      //     street: '123 Sesame St.',
+      //     city: 'New York',
+      //     state: 'NY',
+      //     country: 'USA'
+      // })
     })
     u.addresses.push({
         street: '123 Sesame St.',
@@ -43,4 +49,17 @@ const makeUser = async () => {
     console.log(res)
 }
 
-makeUser()
+const addAddress = async(id) => {
+  const user = await User.findById(id);
+  user.addresses.push({
+        street: '99 3rd St.',
+        city: 'Nairobi',
+        state: 'Buruburu',
+        country: 'Kenya'
+  })
+  const res = await user.save()
+  console.log(res);
+}
+
+addAddress('64a67576deb29773bfddb017')
+// makeUser()
